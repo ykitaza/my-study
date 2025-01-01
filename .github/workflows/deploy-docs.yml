@@ -9,10 +9,12 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -25,6 +27,13 @@ jobs:
           sudo apt-get install -y fonts-noto-cjk
           pip install -r requirements.txt
           
-      - name: Deploy
+      - name: Build site
         run: |
-          mkdocs gh-deploy --force
+          mkdocs build
+        
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
+          force_orphan: true
