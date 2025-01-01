@@ -1,0 +1,16 @@
+pages:
+  stage: build 
+  image: python:3.13-slim
+  before_script:
+    - apt-get update
+    - apt-get install -y fonts-noto-cjk
+    - pip install -r requirements.txt
+  script:
+    - mkdocs build --verbose --site-dir public
+    - mv public ../
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == "document" 

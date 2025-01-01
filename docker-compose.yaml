@@ -1,0 +1,13 @@
+services:
+  docs:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/docs/
+      - ../.git:/docs/.git  # .gitディレクトリをマウント
+    working_dir: /docs
+    command: mkdocs serve -a 0.0.0.0:8000
+    environment:
+      - GIT_PYTHON_GIT_EXECUTABLE=/usr/bin/git
+      - GIT_DISCOVERY_ACROSS_FILESYSTEM=1  # ファイルシステムの境界を超えてgitリポジトリを検索

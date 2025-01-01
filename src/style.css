@@ -1,0 +1,145 @@
+/* Base Variables */
+:root {
+  --primary-color: #2196f3;
+  --accent-color: #1976d2;
+  --text-color: #2c3e50;
+  --border-radius: 8px;
+  --heading-color: #1a237e;
+  --subheading-color: #3949ab;
+  --subheading-color-2: #5c6bc0;
+}
+
+/* Headers */
+.md-typeset h1 {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 2.2em;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin: 1em 0 0.8em;
+  padding-bottom: 0.5em;
+  position: relative;
+  border-bottom: none;
+}
+
+.md-typeset h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+.md-typeset h2 {
+  color: var(--subheading-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  padding-left: 1rem;
+  position: relative;
+  border-bottom: none;
+}
+
+.md-typeset h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.md-typeset h3 {
+  color: var(--subheading-color-2);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.8rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.md-typeset h3::before {
+  content: "\f02d";  /* FontAwesomeの本アイコン */
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  color: var(--subheading-color-2);
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* 以下は既存のスタイルを維持 */
+/* カードグリッド */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* カード基本スタイル */
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.card-description {
+  color: #666;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+/* カードリンク */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.card .card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-badge {
+  display: block;
+  margin: auto auto 0;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .card-badge {
+  transform: scale(1.02);
+}
+
+/* アドモニション */
+.md-typeset .admonition {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

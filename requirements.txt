@@ -1,0 +1,11 @@
+# Documentation static site generator & deployment tool
+mkdocs
+
+# Add your custom theme if not inside a theme_dir
+# (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+#  mkdocs-material>=5.4.0
+mkdocs-material
+mkdocs-markmap
+mkdocs-include-markdown-plugin
+pymdown-extensions
+mkdocs-glightbox

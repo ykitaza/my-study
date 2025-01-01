@@ -1,0 +1,79 @@
+site_name: PONの勉強部屋
+docs_dir: src
+use_directory_urls: false
+
+exclude_docs: |
+  技術調査/index.md
+  **/@resources/*
+  directory_to_exclude/*
+
+theme:
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tracking 
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.tabs.link    
+    - grid                 
+  name: material
+  language: ja
+  palette:
+    - scheme: default
+      primary: indigo  
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Noto Sans JP
+    code: Inconsolata
+repo_url: https://github.com/ykitaza/my-study.git
+repo_name: my-study
+plugins:
+  - search
+  - markmap
+  - include-markdown:
+      opening_tag: "{%"
+      closing_tag: "%}"
+extra_css:
+  - style.css
+  - "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+markdown_extensions:
+  - footnotes
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - def_list
+  - tables
+  - admonition
+  - codehilite:
+      noclasses: true
+      pygments_style: colorful
+      linenums: true
+  - pymdownx.keys
+  - md_in_html
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
