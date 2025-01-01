@@ -4,12 +4,8 @@
 
 以下のマインドマップでRDSの主要な特徴を説明します：
 
-```markmap
-{% include-markdown "AWS/RDS/@resources/markmap.md" %}
-```
+{% include-markdown "AWS/RDS/@resources/名称未設定.html" %}
 
+## RDSの概要
 
-<figure>
-    <img src="AWS/RDS/@resources/test.svg" width="500">
-    <figcaption>3. インストーラの指示に従ってインストール</figcaption>
-</figure>
+dfa
