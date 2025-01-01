@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,13 +25,6 @@ jobs:
           sudo apt-get install -y fonts-noto-cjk
           pip install -r requirements.txt
           
-      - name: Build site
-        run: |
-          mkdocs build
-        
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site  # mkdocsのデフォルトの出力ディレクトリ
-          force_orphan: true   # gh-pagesブランチをクリーンな状態に保つ
+        run: |
+          mkdocs gh-deploy --force
