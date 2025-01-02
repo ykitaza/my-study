@@ -1,4 +1,20 @@
 /* Base Variables */
+/* Background image */
+.home .md-main {
+  background-image: url('src/assets/images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.md-main__inner {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  margin: 0;
+  padding: 1rem;
+}
+
 :root {
   --primary-color: #2196f3;
   --accent-color: #1976d2;
@@ -73,7 +89,8 @@
 }
 
 .md-typeset h3::before {
-  content: "\f02d";  /* FontAwesomeの本アイコン */
+  content: "\f02d";
+  /* FontAwesomeの本アイコン */
   font-family: "FontAwesome";
   position: absolute;
   left: 0;
@@ -94,7 +111,7 @@
 .card {
   background: white;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -105,7 +122,7 @@
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
@@ -149,5 +166,5 @@
 .md-typeset .admonition {
   border: none;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

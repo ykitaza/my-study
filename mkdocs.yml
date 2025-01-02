@@ -22,6 +22,7 @@ theme:
     - toc.integrate      # 右側のナビゲーションを本文に統合
     - navigation.expand  # 左側のナビゲーションをデフォルトで折りたたむ
   name: material
+  custom_dir: overrides
   language: ja
   palette:
     - scheme: default
