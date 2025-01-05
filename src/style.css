@@ -7,13 +7,6 @@
   background-position: center;
 }
 
-.md-main__inner {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: var(--border-radius);
-  margin: 0;
-  padding: 1rem;
-}
 
 :root {
   --primary-color: #2196f3;
