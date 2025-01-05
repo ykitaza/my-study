@@ -1,0 +1,36 @@
+# MkDocs specific exclusions
+src/技術調査/index.md
+src/**/@resources/*
+directory_to_exclude/*
+
+# Python specific exclusions
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# OS or Editor specific exclusions
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+*.log
+
+# Sensitive files
+*.env
+.env
+*.secret
+*.pem
+
+# temporary files
+*.tmp
+*.tmp.*
+*.tmp/*
+# temporary directories
+tmp/
+temp/
+temp-*/
+tmp-*/
