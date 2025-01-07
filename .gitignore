@@ -1,6 +1,5 @@
 # MkDocs specific exclusions
 src/技術調査/index.md
-src/**/@resources/*
 directory_to_exclude/*
 
 # Python specific exclusions
